@@ -8,7 +8,7 @@ function btnClicked() {
   let input3 = document.getElementById("input3").value.toLowerCase();
   let input4 = document.getElementById("input4").value.toLowerCase();
 
-  if (input1 === "matthew mcconaughey") {
+  if (input1 === "stoick") {
     total = total + 1;
     document.getElementById("output1").innerHTML = "Correct";
     document.getElementById("output1").style.color = "darkgreen";
@@ -17,7 +17,7 @@ function btnClicked() {
     document.getElementById("output1").style.color = "darkred";
   }
 
-  if (input2 === "professor brand" || input2 === "brand") {
+  if (input2 === "toothless" || input2 === "nightfury") {
     total = total + 1;
     document.getElementById("output2").innerHTML = "Correct";
     document.getElementById("output2").style.color = "darkgreen";
@@ -26,7 +26,7 @@ function btnClicked() {
     document.getElementById("output2").style.color = "darkred";
   }
 
-  if (input3 === "2014") {
+  if (input3 === "2010") {
     total = total + 1;
     document.getElementById("output3").innerHTML = "Correct";
     document.getElementById("output3").style.color = "darkgreen";
@@ -35,7 +35,7 @@ function btnClicked() {
     document.getElementById("output3").style.color = "darkred";
   }
 
-  if (input4 === "iceland") {
+  if (input4 === "john powell") {
     total = total + 1;
     document.getElementById("output4").innerHTML = "Correct";
     document.getElementById("output4").style.color = "darkgreen";
@@ -48,12 +48,15 @@ function btnClicked() {
   document.getElementById("output").innerHTML = `${percentTotal}%`;
   if (total === 0) {
     document.getElementById("output-txt").innerHTML =
-      "bro this is just sad get better";
-  } else if (total <= 2) {
+      "You are banished from the tribe";
+  } else if (total === 1) {
     document.getElementById("output-txt").innerHTML =
-      "Re-read the home page buddy";
+      "Back to Dragon School";
+  } else if (total === 2) {
+    document.getElementById("output-txt").innerHTML =
+      "Stoick would be dissapointed";
   } else if (total >= 3) {
     document.getElementById("output-txt").innerHTML =
-      "Congrats, you passed! Now go away";
+      "Congrats, here's some dragon nip";
   }
 }
